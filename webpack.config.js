@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
   entry: './src/app.js',
   output: {
@@ -16,7 +18,15 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\.styl$/,
+        exclude: /node_modules/,
+        loader: ExtractTextPlugin.extract('css!stylus')
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin("styles.css")
+  ]
 };

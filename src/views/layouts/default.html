@@ -5,10 +5,14 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ pagetitle }}</title>
+  <link rel="stylesheet" href="./styles.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
   {%- block body %}
   <h1>Content loads here</h1>
   {% endblock -%}
+
+  <script src="./bundle.js"></script>
 </body>
 </html>

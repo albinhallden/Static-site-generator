@@ -6,15 +6,20 @@
   "scripts": {
     "prestart": "babel-node ./tools/clean.js",
     "start": "babel-node ./index.js",
-    "build": "webpack -p"
+    "build": "webpack",
+    "build-prod": "webpack -p"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "front-matter": "^2.1.0",
     "glob": "^7.0.3",
     "mkdirp": "^0.5.1",
     "nunjucks": "^2.4.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.1.0",
     "webpack": "^1.13.1"
   },
   "devDependencies": {
