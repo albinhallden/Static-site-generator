@@ -1,12 +1,14 @@
+{%- set pagetitle = pagetitle or "no title" -%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Page</title>
+  <title>{{ pagetitle }}</title>
 </head>
 <body>
-  {% block body %}
+  {%- block body %}
   <h1>Content loads here</h1>
-  {% endblock %}
+  {% endblock -%}
 </body>
 </html>
