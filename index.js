@@ -3,6 +3,8 @@ import fs from 'fs';
 import nunjucks from 'nunjucks';
 import mkdirp from 'mkdirp';
 import fm from 'front-matter';
+import webpack from 'webpack';
+import webpackConfig from './webpack.config.js';
 
 const nunjucksEnv = new nunjucks.Environment(
   new nunjucks.FileSystemLoader(['./src/views/'])
@@ -46,10 +48,8 @@ const getFileNames = (dir = '/') => {
 }
 getFileNames();
 
-import webpack from 'webpack';
-import webpackConfig from './webpack.config.js';
 const compiler = webpack(webpackConfig);
-compiler.run((err, stats) => {
+compiler.run((err) => {
   if (err) {
     console.log('webpack error:', err); // eslint-disable-line
   } else {

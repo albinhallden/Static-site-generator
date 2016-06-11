@@ -1,14 +1,8 @@
-'use strict';
-
 const fs = require('fs');
 
 const paths = [
   'dist'
 ];
-
-// export function cleanDir(path) => {
-
-// };
 
 paths.forEach(path => {
   const deleteFolderRecursive = function(path) {
@@ -23,9 +17,9 @@ paths.forEach(path => {
           // Delete file
           try {
             fs.unlinkSync(currentPath);
-            console.log(`Deleted ${currentPath}`);
+            console.log(`Deleted ${currentPath}`); // eslint-disable-line
           } catch (error) {
-            console.error(`Error deleting ${currentPath}. ERROR: ${error}`);
+            console.error(`Error deleting ${currentPath}. ERROR: ${error}`); // eslint-disable-line
           }
         }
       });
