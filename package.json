@@ -6,8 +6,7 @@
   "scripts": {
     "prestart": "babel-node ./tools/clean.js",
     "start": "babel-node ./index.js",
-    "build": "webpack",
-    "build-prod": "webpack -p"
+    "build": "webpack -p",
   },
   "author": "",
   "license": "ISC",
